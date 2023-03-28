@@ -1,7 +1,11 @@
 import React,{useState} from "react";
 import "./Signup.css";
+
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 const Signup=()=>{
+  const navigate = useNavigate();
   const [user,setUser]=useState({
     name:"", email:"", password:"", conpassword:""
   });
@@ -24,7 +28,15 @@ const Signup=()=>{
       })
 
     });
-    res=await res.json();
+    const data =await res.json();
+    if(res.status(422)||!data){
+      window.alert("Invalid registration");
+      console.log("Invalid registration");
+    }else{
+      window.alert("Registration successfull");
+      console.log("Registration successfull");
+      navigate("/login");
+    }
   }
     return(
         <div className="signup-body" style={{background:"linear-gradient(90deg, #ee6352, purple, #ee6352)",
