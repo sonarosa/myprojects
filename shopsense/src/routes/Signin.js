@@ -15,7 +15,7 @@ const Signin=()=>{
           <div className="form-body">
           <form>
         <h4>Login</h4>
-        <div className="mb-3">
+        <div className="mb-3" id="username">
           <label>Username</label>
           <input
             type="text"
@@ -24,7 +24,7 @@ const Signin=()=>{
           />
         </div>
     
-        <div className="mb-3">
+        <div className="mb-3" id="password">
           <label>Password</label>
           <input
             type="password"
@@ -32,7 +32,7 @@ const Signin=()=>{
             placeholder="Enter password"
           />
         </div>
-        <div className="d-grid">
+        <div className="d-grid" id="submitbtn">
           <button type="submit" className="btn btn-primary">
             LOGIN
           </button>

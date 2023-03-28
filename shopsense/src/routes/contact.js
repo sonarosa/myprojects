@@ -4,7 +4,7 @@ import "./contact.css";
 import { Container, Row, Col } from "react-bootstrap";
 export default function contact() {
   return (   
-  <div>
+  <div className='body-contact'>
     <Navbar/>
     <form action="">
       <div class="title">
