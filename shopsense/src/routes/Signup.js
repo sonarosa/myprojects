@@ -21,7 +21,7 @@ const Signup=()=>{
      const{name,email,password,conpassword}=user;
       const res = await fetch("/",{method:"POST",
       headers:{
-      "Content-Type":"application/json"
+      "Content-Type":"/json"
       },
       body:JSON.stringify({
         name,email,password,conpassword
@@ -50,6 +50,7 @@ const Signup=()=>{
           <label>Username</label>
           <input
             type="text"
+            name="name" 
             className="form-control"
             id="uname"
             placeholder="Username"
@@ -61,6 +62,7 @@ const Signup=()=>{
           <label>Email </label>
           <input
             type="email"
+            name="email" 
             className="form-control"
             placeholder="Enter email"
             id="email"
@@ -72,6 +74,7 @@ const Signup=()=>{
           <label>Password</label>
           <input
             type="password"
+            name="password"
             className="form-control"
             placeholder="Enter password"
             id="password"
@@ -83,6 +86,7 @@ const Signup=()=>{
           <label>Confirm password</label>
           <input type="password" className="form-control" placeholder="Confirm password"
           id="cpassword"
+          name="conpassword"
           value={user.conpassword}
           onChange={handleInputs} />
         </div>
