@@ -21,7 +21,7 @@ const Signup=()=>{
      const{name,email,password,conpassword}=user;
       const res = await fetch("/",{method:"POST",
       headers:{
-      "Content-Type":"/json"
+      "Content-Type":"application/json"
       },
       body:JSON.stringify({
         name,email,password,conpassword
