@@ -9,6 +9,7 @@ const Signup=()=>{
   const [user,setUser]=useState({
     name:"", email:"", password:"", conpassword:""
   });
+
   let name,value;
   const handleInputs=(e)=>{
     console.log(e);
@@ -16,6 +17,7 @@ const Signup=()=>{
     value=e.target.value;
     setUser({...user,[name]:value});
   }
+  
   const postdata=async(e)=>{
      e.preventDefault();
      const{name,email,password,conpassword}=user;
